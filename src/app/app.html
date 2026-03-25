@@ -4,25 +4,54 @@
 <!-- ფროფერთი ბაინდინგი  []  -->
  <!-- ივენთ ბაინდინგი   () -->
 
+<!-- if for swich let -->
+
 
 <app-header></app-header>
 
 
-<main>
-    <img [src]="photo" [alt]="greeting" [className]="showHide" >
-    <h1>hello {{greeting}} </h1>
-    <p>{{x}}</p>
-    <button 
-    [disabled]="!userAuth"  
-    [className]="mainbtn" 
-    (click)="changebtn()"
-    >
-    ok</button>
+
+<section>
+    @if(show){
+     <main >
+       <h2>{{age}}</h2>
+       <p>{{name}}</p>
+       <input [type]="tp" [placeholder]="name">
+       <img width="150" [src]="photo" alt="">
+        @if(showbtn){
+           <button (click)="print()" >ok</button>
+        }
+      </main>
+    }
+
+</section>
 
 
-  <h2>{{user.name}}</h2>
-  <p>{{user.age}}</p>
-</main>
+<button (click)="showHide()" [className]="btnclass">show</button>
 
 
 
+<ul>
+   @for (num of numArr; track $index) {
+     <li>{{num}}  {{$index}}</li>
+   }
+</ul>
+
+
+<div class="cont">
+     @for (item of products; track $index) {
+      <div class="card" style="width: 18rem;">
+        <img [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text"> {{item.description}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+        
+     }
+</div>
+
+
+
+<app-footer></app-footer>

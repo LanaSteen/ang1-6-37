@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss',
 })
 export class Header {
+    username = "Jonh"
+    
 
-
-  
 }
+
+

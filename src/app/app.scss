@@ -17,6 +17,19 @@ main{
 }
 
 
+
+.firsplace{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.secondplace{
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
 .show{
    display: block;
 }
