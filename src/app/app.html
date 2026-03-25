@@ -1,0 +1,28 @@
+
+
+<!-- one way binding {{}}  სტრინგის ინტერპოლაცია   ${}-->
+<!-- ფროფერთი ბაინდინგი  []  -->
+ <!-- ივენთ ბაინდინგი   () -->
+
+
+<app-header></app-header>
+
+
+<main>
+    <img [src]="photo" [alt]="greeting" [className]="showHide" >
+    <h1>hello {{greeting}} </h1>
+    <p>{{x}}</p>
+    <button 
+    [disabled]="!userAuth"  
+    [className]="mainbtn" 
+    (click)="changebtn()"
+    >
+    ok</button>
+
+
+  <h2>{{user.name}}</h2>
+  <p>{{user.age}}</p>
+</main>
+
+
+
