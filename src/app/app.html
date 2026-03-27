@@ -11,47 +11,14 @@
 
 
 
-<section>
-    @if(show){
-     <main >
-       <h2>{{age}}</h2>
-       <p>{{name}}</p>
-       <input [type]="tp" [placeholder]="name">
-       <img width="150" [src]="photo" alt="">
-        @if(showbtn){
-           <button (click)="print()" >ok</button>
-        }
-      </main>
-    }
-
-</section>
 
 
-<button (click)="showHide()" [className]="btnclass">show</button>
+<app-restaurant></app-restaurant>
+
+<!-- <app-home></app-home> -->
+
+<!-- <router-outlet></router-outlet> -->
 
 
 
-<ul>
-   @for (num of numArr; track $index) {
-     <li>{{num}}  {{$index}}</li>
-   }
-</ul>
-
-
-<div class="cont">
-     @for (item of products; track $index) {
-      <div class="card" style="width: 18rem;">
-        <img [src]="item.image" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{item.title}}</h5>
-          <p class="card-text"> {{item.description}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-        
-     }
-</div>
-
-
-
-<app-footer></app-footer>
+<app-footer>   </app-footer>

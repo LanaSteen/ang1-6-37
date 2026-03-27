@@ -1,0 +1,26 @@
+<!-- standalone -->
+
+<!-- *ngFor  *ngIf -->
+ <!-- @for @if @switch @let -->
+
+<input type="text" [(ngModel)]="name" (ngModelChange)="filter($event)" />
+<h2>{{ name }}</h2>
+
+<button (click)="sort()">{{asc}}</button>
+
+
+ @for (el of filterProdcuts; track el.id) {
+    <!-- <div class="card" style="width: 18rem;" (click)="getid(item.id)"> -->
+    <div class="card" style="width: 18rem" (click)="getid(el)">
+      <img [src]="el.image" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ el.name }}</h5>
+        <p class="card-text">{{ el.price }}</p>
+        <!-- <p>{{el.color[2]}}</p> -->
+        @for (col of el.color; track $index) {
+          <span>{{ col }} </span>
+        }
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  }
