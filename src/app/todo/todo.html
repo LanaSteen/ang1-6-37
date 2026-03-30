@@ -1,0 +1,19 @@
+<h1>To do app</h1>
+
+<input type="text" [(ngModel)]="newTask" placeholder="Enter task" />
+<button (click)="addTask()">Add</button>
+
+<!-- *If *For -->
+
+<div class="tasks">
+  @for (item of tasks; track $index) {
+    <div class="row" [ngStyle]="{color: item.completed ? 'green': 'purple' } ">
+      <span [className]="item.completed? 'comp' : '' " >{{ item.title }}</span>
+      <button  (click)="compliteTask(item)">{{ !item.completed ? 'Complete' : 'Undo' }}</button>
+      <button [ngClass]="{red : item.completed}"  (click)="deleteTask(item)">x</button>
+    </div>
+  }
+</div>
+
+<!-- [ngClass]
+[ngStyle] -->

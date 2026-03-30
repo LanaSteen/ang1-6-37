@@ -3,19 +3,33 @@
 <!-- *ngFor  *ngIf -->
  <!-- @for @if @switch @let -->
 
+
+
+
+ <div class="btns">
+    <button (click)="showAll()">All</button>
+     @for (item of categories; track item.id) {
+           <button (click)="filterByCat(item.id)">{{item.name}}</button>
+     }
+ </div>
+
 <input type="text" [(ngModel)]="name" (ngModelChange)="filter($event)" />
 <h2>{{ name }}</h2>
 
-<button (click)="sort()">{{asc}}</button>
+<button (click)="sort()">{{asc}} by price</button>
 
+<button (click)="sort2()">{{ascspi}} by spiciness</button>
 
- @for (el of filterProdcuts; track el.id) {
+ @let randerProducts = filterProdcuts.length >  0 ? filterProdcuts : products;
+
+ @for (el of randerProducts; track el.id) {
     <!-- <div class="card" style="width: 18rem;" (click)="getid(item.id)"> -->
     <div class="card" style="width: 18rem" (click)="getid(el)">
       <img [src]="el.image" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{ el.name }}</h5>
         <p class="card-text">{{ el.price }}</p>
+                <p class="card-text">{{ el.spiciness }}</p>
         <!-- <p>{{el.color[2]}}</p> -->
         @for (col of el.color; track $index) {
           <span>{{ col }} </span>
