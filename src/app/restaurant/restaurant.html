@@ -13,8 +13,8 @@
      }
  </div>
 
-<input type="text" [(ngModel)]="name" (ngModelChange)="filter($event)" />
-<h2>{{ name }}</h2>
+<input type="text" [(ngModel)]="getnamet" (ngModelChange)="filter($event)" />
+<h2>{{ getnamet() }}</h2>
 
 <button (click)="sort()">{{asc}} by price</button>
 

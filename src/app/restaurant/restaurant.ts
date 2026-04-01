@@ -36,13 +36,8 @@ sort(){
   }else{
      this.filterProdcuts = this.products
            
-           this.filterProdcuts.sort((a:Product,b:Product)=> {
-            if(a.price && b.price){
-                return   b.price -a.price
-            }else{
-                return 0
-            }
-           })
+        // this.filterProdcuts.sort((a,b)=> a.price && b.price ? a.price - b.price : 0)
+         this.filterProdcuts.sort((a,b)=>  a.price! - b.price! )
   }
 
 }
@@ -79,9 +74,15 @@ getid(obj : Product){
   console.log(obj)
 }
 
-id = 100
-name ="k"
+private id = 100
+private name ="k"
 
+getnamet(){
+  return  this.name.toUpperCase()
+}
+setNAme(){
+   this.name = "dsfgh"
+}
 filter(input : string){
   this.filterProdcuts = this.products
    console.log(input)
@@ -91,9 +92,9 @@ filter(input : string){
 showAll(){
   this.filterProdcuts = this.products
 }
-
 filterByCat(id: number){
    this.filterProdcuts = this.products.filter(el => el.categoryId == id)
+  //  this.filterProdcuts =  this.products.
 }
 
  filterProdcuts : Product[] = []

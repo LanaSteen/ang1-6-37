@@ -1,8 +1,11 @@
 
-
 export class Product{
+  constructor(){
+
+    
+  }
   id! : number;
-  name? : string;
+  name? : string ;
   price? : number;
   nuts? : boolean;
   image? : string;

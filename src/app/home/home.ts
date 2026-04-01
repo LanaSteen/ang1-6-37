@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class Home {
 
+  constructor(private router : Router){}
 
   // let const function 
  
@@ -28,6 +30,7 @@ export class Home {
 // !true = false
 
    print(){
+    this.router.navigateByUrl("restaurant")
     this.firstclick = !this.firstclick
     console.log("rame")
     this.firstclick ?  this.age = 100 : this.age  =50
