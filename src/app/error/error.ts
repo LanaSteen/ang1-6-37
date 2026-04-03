@@ -8,15 +8,21 @@ import { Router } from '@angular/router';
   styleUrl: './error.scss',
 })
 export class Error {
-  constructor(private rouet : Router){
-
+  constructor(private rouetr : Router){
+     console.log()
   }
+
+
   ngOnInit(){
 
+  }
+  ngOnDestroy(){
+    console.log("commponent ");
+    
   }
 
   gotoHome(){
     // this.rouet.navigate(["home"])
-    this.rouet.navigateByUrl("home")
+    this.rouetr.navigateByUrl("home")
   }
 }

@@ -17,6 +17,22 @@ export class Product{
 }
 
 
+export class Product2{
+  constructor(){
+    
+  }
+  id! : number;
+  name? : string ;
+  price? : number;
+  nuts? : boolean;
+  image? : string;
+  vegeterian? : boolean;
+  spiciness? : number;
+  categoryId? : number;
+
+}
+
+
 export class Cetegory {
   id!:number;
   name? : string

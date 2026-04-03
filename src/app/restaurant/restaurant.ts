@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { category, Cetegory, Product } from '../models/product';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './restaurant.html',
   styleUrl: './restaurant.scss',
 })

@@ -24,7 +24,7 @@
 
  @for (el of randerProducts; track el.id) {
     <!-- <div class="card" style="width: 18rem;" (click)="getid(item.id)"> -->
-    <div class="card" style="width: 18rem" (click)="getid(el)">
+    <div class="card" style="width: 18rem" (click)="getid(el)" routerLink="/details" [queryParams]="{id:el.id}">
       <img [src]="el.image" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{ el.name }}</h5>
