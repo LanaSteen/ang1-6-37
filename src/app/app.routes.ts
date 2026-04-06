@@ -29,6 +29,10 @@ export const routes: Routes = [
     loadComponent: () => import('./restaurant-api/restaurant-api').then((m) => m.RestaurantApi),
   },
   {
+    path: 'login',
+    loadComponent: () => import('./login/login').then((m) => m.Login),
+  },
+  {
     path: 'details/:id',
     loadComponent: () => import('./details/details').then((m) => m.Details),
   },

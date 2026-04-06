@@ -1,1 +1,9 @@
 <p>restaurant-api works!</p>
+
+
+@for (item of productsArr; track $index) {
+  <h1>{{item.name}}</h1>
+}
+@for (item of newProductArr; track $index) {
+  <img [src]="item.image" alt="" width="200">
+}
