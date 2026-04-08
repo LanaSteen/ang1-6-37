@@ -3,10 +3,11 @@ import { Api } from '../services/api';
 import { Cetegory, Product, Product2 } from '../models/product';
 import { catchError } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Button } from "../button/button";
 
 @Component({
   selector: 'app-restaurant-api',
-  imports: [],
+  imports: [Button],
   templateUrl: './restaurant-api.html',
   styleUrl: './restaurant-api.scss',
 })
@@ -17,6 +18,8 @@ export class RestaurantApi {
       private cdr : ChangeDetectorRef){
 
     }
+
+    textVar = "start to order"
     ngOnInit(){
 
 

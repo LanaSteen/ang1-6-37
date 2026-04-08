@@ -1,22 +1,44 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Task } from '../models/task';
+import { Button } from "../button/button";
 
 @Component({
   selector: 'app-todo',
-  imports: [FormsModule, CommonModule ],
+  imports: [FormsModule, CommonModule, Button],
   templateUrl: './todo.html',
   styleUrl: './todo.scss',
 })
 export class Todo {
 
 
+  // constructor(private cdr : ChangeDetectorRef){
+
+    
+  // }
+
+
   clasSaxeli = "comp"
   addText = "Add"
+  btnTaxtFromParent = "Satrt make your list"
+
+  changeTExt(){
+    this.btnTaxtFromParent = "done"
+  }
 
   ngOnInit(){
-     this.tasks = JSON.parse(localStorage.getItem("tsks") || "" )
+     this.tasks = JSON.parse(localStorage.getItem("tsks") || "[]" )
+  }
+
+
+  isChildBtnClicked = false
+
+  getInfoFromChild(event : any){
+    this.isChildBtnClicked = event
+    // this.cdr.detectChanges()
+    console.log(event);
+    
   }
 
   tasks : Task[] = []

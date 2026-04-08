@@ -1,9 +1,16 @@
-<h1>To do app</h1>
 
-<input type="text" [(ngModel)]="newTask" placeholder="Enter task" />
+<!-- <app-button [btnText]="'start make your list'" (sendInfoToParent)="getInfoFromChild($event)"></app-button> -->
+<app-button [btnText]="btnTaxtFromParent" (sendInfoToParent)="getInfoFromChild($event)"></app-button>
+
+<h1>To do app</h1>
+<button (click)="changeTExt()">change text to child btn</button>
+
+@if (isChildBtnClicked) {
+  <input type="text" [(ngModel)]="newTask" placeholder="Enter task" />
 <p>{{taskPriority}}</p>
 <input type="range" min="1" max="5" [(ngModel)]="taskPriority" >
 <button (click)="addTask()">{{addText}}</button>
+}
 
 <!-- *ngIf *ngFor -->
 
