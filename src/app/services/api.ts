@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LoingUser } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
@@ -21,8 +22,15 @@ export class Api {
 
 
   getAll(url : string){
-      return this.api.get(this.baseUrl + url )
+      return this.api.get(this.baseUrl + url , )
   }
 
+  // {withCredentials : true}    //  ავტომატურად გავიიდეს ქუქი
+
+    //   auth/login
+
+  login(url : string, obj : LoingUser){
+    return this.api.post(this.baseUrl2 +  url, obj )
+  }
 
 }

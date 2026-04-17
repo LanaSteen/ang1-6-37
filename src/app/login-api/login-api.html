@@ -1,0 +1,40 @@
+<p>login-api works!</p>
+
+<!-- template driven form -->
+
+<form #myLoginForm="ngForm" (ngSubmit)="login(myLoginForm)">
+  <input
+    type="email"
+    [(ngModel)]="loginUser.email"
+    required
+    name="email"
+    ngModel
+    #email="ngModel"
+    email
+  />
+  @if (!myLoginForm.valid && myLoginForm.controls['email'].touched && email.errors) {
+    <p style="color: red">email is not valid</p>
+  }
+  <input
+    type="password"
+    [(ngModel)]="loginUser.password"
+    required
+    name="password"
+    ngModel
+    #password="ngModel"
+    pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d.@]{6,}$"
+    minLength="8"
+    maxLength=""
+  />
+
+  @if (!myLoginForm.valid && myLoginForm.controls['password'].touched) {
+    <p style="color: red">password is not valid</p>
+  }
+  @if(password.errors?.['minlength']){
+      <p style="color: red">password must have more then 8 characters</p>
+  }
+  <button>Log In</button>
+</form>
+
+
+<!-- Cookies : fdgfhhj -->

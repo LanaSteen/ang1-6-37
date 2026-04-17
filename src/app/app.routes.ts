@@ -38,6 +38,11 @@ export const routes: Routes = [
     path: 'details/:id',
     loadComponent: () => import('./details/details').then((m) => m.Details),
   },
+{
+    path: 'loginapi',
+    loadComponent: () => import('./login-api/login-api').then((m) => m.LoginApi),
+  },
+  
   {
     path: '**',
     loadComponent: () => import('./error/error').then((m) => m.Error),
