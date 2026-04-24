@@ -1,11 +1,24 @@
 
 
+@if (alertShow()) {
+  <div class="dialog-overlay">
+    <div class="dialog-box">
+      <app-alert></app-alert>
+    </div>
+  </div>
+}
+
 <!-- one way binding {{}}  სტრინგის ინტერპოლაცია   ${}-->
 <!-- ფროფერთი ბაინდინგი  []  -->
  <!-- ივენთ ბაინდინგი   () -->
 
 <!-- if for swich let -->
 
+
+<app-child-selector></app-child-selector>
+
+
+<!-- <app-reactive-form></app-reactive-form> -->
 
 <app-header></app-header>
 
@@ -24,3 +37,9 @@
 
 
 <app-footer>   </app-footer>
+
+
+
+
+
+

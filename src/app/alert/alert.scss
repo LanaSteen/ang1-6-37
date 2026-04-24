@@ -1,0 +1,27 @@
+button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #e60000;
+  transform: scale(1.1);
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 22px;
+  color: #333;
+}
