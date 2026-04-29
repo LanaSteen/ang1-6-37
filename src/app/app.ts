@@ -9,13 +9,15 @@ import { ReactiveForm } from './reactive-form/reactive-form';
 import { ChildSelector } from './child-selector/child-selector';
 import { Alert } from "./alert/alert";
 import { Dialog } from './services/dialog';
+import { TestPipes } from './test-pipes/test-pipes';
+import { TemplateTest } from './template-test/template-test';
 
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Home, Restaurant, Todo, ReactiveForm, ChildSelector, Alert],
+  imports: [RouterOutlet, Header, Footer, Home, Restaurant, Todo, ReactiveForm, ChildSelector, Alert, TestPipes, TemplateTest],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,0 +1,47 @@
+<p>test-pipes works!</p>
+
+
+<h1>{{text | uppercase}}   </h1>
+
+<h1>{{text | lowercase}}   </h1>
+<h2>{{convertString(text)}}</h2>
+
+
+
+<!-- text -->
+<!-- t-e-x-t -->
+
+
+<h4>{{formatString("text")}}</h4>
+
+
+<h3>{{format2String("text")}}</h3>
+
+
+
+
+
+
+<p>{{sumPer | percent}}</p>
+
+
+<h2>sliced {{text | slice:1:5}}</h2>
+
+
+<h3>date :  {{date | date:'fullDate'}}</h3>
+<h3>date :  {{date | date:'shortDate'}}</h3>
+<h3>date :  {{date | date:'yyyy-MM-dd'}}</h3>
+<h3>date :  {{date | date:'dd-MM-yy'}}</h3>
+<h3>time :  {{date | date:'shortTime'}}</h3>
+<h3>time :  {{date | date:'fullTime'}}</h3>
+
+
+<p>amount : {{sumPer | currency}}</p>
+<p>amount : {{sumPer | currency:'EUR'}}</p>
+<p>amount : {{sumPer | currency:'GEL'}}</p>
+<p>amount : {{sumPer | currency:'GBP'}}</p>
+
+
+
+
+<h2>{{ variableInJson | json}}</h2>

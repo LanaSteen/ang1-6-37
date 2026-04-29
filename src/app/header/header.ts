@@ -2,10 +2,13 @@ import { Component, effect } from '@angular/core';
 // import { RouterModule } from '@angular/router';
 import { RouterModule } from "@angular/router";
 import { Auth } from '../services/auth';
+import { Active } from '../directives/active';
+import { Number } from '../directives/number';
+
 
 @Component({
   selector: 'app-header',
-  imports: [ RouterModule],
+  imports: [ RouterModule, Active, Number],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
