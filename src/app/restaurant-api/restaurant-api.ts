@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, DestroyRef } from '@angular/core';
+import { ChangeDetectorRef, Component, DestroyRef, Input } from '@angular/core';
 import { Api } from '../services/api';
 import { Cetegory, Product, Product2 } from '../models/product';
 import { catchError } from 'rxjs';
@@ -18,6 +18,17 @@ export class RestaurantApi {
       private cdr : ChangeDetectorRef){
 
     }
+
+
+    // SRP  
+
+    @Input() fromParetn = ""
+
+    ngOnChanges(){
+      console.log(this.fromParetn);
+      
+    }
+
 
     textVar = "start to order"
     ngOnInit(){

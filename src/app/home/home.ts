@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';  //  development არა!!!1!
+import { IUser, LoingUser, User } from '../models/user';
+
 
 @Component({
   selector: 'app-home',
@@ -10,6 +13,20 @@ import { Router } from '@angular/router';
 export class Home {
 
   constructor(private router : Router){}
+
+
+  ngOnInit(){  
+      console.log(environment.rame);
+      
+  }
+
+  newUser : IUser ={
+     userName : null
+  }
+
+  user2  : User = new User();
+
+  user : LoingUser = new LoingUser();
 
   // let const function 
  

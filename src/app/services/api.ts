@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoingUser } from '../models/user';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,12 @@ export class Api {
 
   }
 
-  baseUrl2 = "https://restaurantapi.stepacademy.ge/api/"
+
+  env = environment.production   // false true 
+
+
+
+  baseUrl2 = !this.env ? "https://restaurantapi.stepacademy.ge/api/" : "production.link"
   //  https://restaurantapi.stepacademy.ge/api
 
 
